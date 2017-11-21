@@ -1,0 +1,29 @@
+<!-- login Container -->
+<div class="form-container">
+        
+            <div class="row" style="margin-bottom:20px; padding-left:100px; padding-right:100px; margin-left:50px; margin-right:50px">
+        
+                <div class="col-sm-4"  style="text-align:right">
+        
+                    <h4 style="color:#D98880"><em>SignUp Here</em></h4>
+                </div>
+            </div>
+        
+            <!-- Login Form -->
+            <form class="form-register" style="border: 1px solid black">
+
+                <!-- Username Input -->
+                <input type="text" class="form-control" placeholder="User name" style="margin-bottom:10px;" ng-model="username" required>
+                
+                <!-- email Input -->
+                <input type="email" class="form-control" placeholder="Email address" style="margin-bottom:10px;" ng-model="email"  required>
+        
+                <!-- Password Input -->
+                <input type="password"  class="form-control" placeholder="Password" style="margin-bottom:10px;" ng-model="password" required>
+        
+                <!-- Submit Button -->
+                <button class="btn btn-lg btn-info btn-block" type="submit" ng-click="register()">Register</button>
+            </form>
+            <!-- /.Login Form -->
+        </div>
+        <!-- /.login Container -->

@@ -1,0 +1,38 @@
+<!-- login Container -->
+<div class="form-container">
+
+	<div class="row login-title">
+
+		<div class="col-sm-4" style="text-align:right">
+
+			<h4 style="color:#D98880"><em>Signin Here</em></h4>
+		</div>
+
+		<div class="col-sm-8" style="text-align: right">
+			<h4><em> New User ?<a href="#Register" >Register</a></em></h4>
+		</div>
+	</div>
+
+	<p class="login-error"><strong><em>{{error}}</em></strong> </p>
+
+	<!-- Login Form -->
+	<form class="form-login" style="border: 1px solid grey">
+		
+		<!-- email Input -->
+		<input type="email" class="form-control" placeholder="Email address" style="margin-bottom:10px;" ng-model="email" required>
+
+		<!-- Password Input -->
+		<input type="password"  class="form-control" placeholder="Password" style="margin-bottom:10px;" ng-model="password" required>
+
+		<div class="checkbox" style="text-align: center">
+			<label>
+			<input type="checkbox" value="remember-me" required> Remember me
+			</label>
+		</div>
+
+		<!-- Submit Button -->
+		<button class="btn btn-lg btn-info btn-block" type="submit" ng-click="login()">Login</button>
+	</form>
+	<!-- /.Login Form -->
+</div>
+<!-- /.login Container -->

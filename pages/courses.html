@@ -1,0 +1,104 @@
+<!-- Main Container -->
+<div class="data conatiner-fluid">
+
+	<!-- Page Header -->
+	<div class="page-header">
+		<div class="row">
+			<div class="col-sm-6">
+					<h3 style="color:#BA4A00"><strong>Hey, Learning Courses for you</strong></h3>
+			</div>
+			<div class="col-sm-6">
+					<h3 style="color:#ABB2B9; text-align:right;" ng-hide="activeflag"><em><a href="#Login" >Login</a></em></h3>
+					<h3 style="color:#ABB2B9; text-align:right;" ng-show="activeflag"><em>Hey, {{userdata}}</em></h3>
+			</div>
+		</div>
+	</div>
+	<!--/. Page Header -->
+
+	<!-- Course Starting Date -->
+
+	<p style="text-align: center; font-size:18px; color:#EC7063"><strong><em>{{error}}</em></strong> </p>
+	<!-- <p style="text-align: right; font-size:18px; color: #73C6B6"><strong><em>Starting on {{today | date}}</em></strong> </p> -->
+	<!--/. Course Starting Date -->
+
+	<!-- Content -->
+	<div class="row" style="margin-left:20px; margin-right:25px;">
+
+		<!-- Enrolled Courses -->
+		<div class="col-sm-2 enrolled">
+
+			<p  class="course-header"><strong><em>Your Enrolled Courses</em></strong></p>
+						
+			<!-- Well Display conatiner -->
+			<div class="well well-sm well-data"  ng-repeat="content in products">                                                                                        
+							
+				<div class="row">
+					
+					<!-- Enrolled Courses List -->
+					<div class="col-sm-9">
+								   
+						<!-- Course Name -->
+						<p> {{content}} </p> 		   
+						<!-- /.Course Name -->
+					</div> 
+
+					<!-- Selected Course Deletion List -->
+					<div class="col-sm-3">
+								   
+						<!-- close option -->
+						<i class="fa fa-times" ng-click="removeItem($index)"></i>
+					</div> 
+					<!--/.Selected Course Deletion List -->
+				</div>
+			</div>
+			<!-- Well Display conatiner -->
+		</div>
+		<!-- Enrolled Courses -->
+
+		<!-- Course List -->
+		<div class="col-sm-10">
+
+			<div class="row">
+						
+				<!-- Content Category -->
+				<div class="col-md-6" ng-repeat="content in contentlist">
+						
+					<!-- Category well -->
+					<div class="well well-sm">
+													
+						<div class="row">
+						
+							<!-- well image -->
+							<div class="col-md-4">
+								<img ng-src="{{content.image_url}}" class="img-rounded img-responsive"> 
+							</div>
+							<!-- /.well image -->
+						
+							<!-- well Content -->
+							<div class="col-md-8">
+						
+								<!-- category title -->
+								<h4 style="color:#3C86A0"><strong><em>{{content.category}}</em></strong></h4>
+						
+								<!-- category Description -->
+								<p style="color:#575F5A"><strong>{{content.description}}</strong></p> 
+
+								<!-- Course Starting Date -->
+								<p style="color:#575F5A"><strong><em>Starting From-</em>{{today | date}}</strong></p></p>
+															
+								<!-- learning link -->
+								<button class="btn btn-primary btn-sm pull-right" style="margin-right:8px" ng-click="addItem(content.category)">Enroll Now<buttonss>   
+							</div>
+							<!-- /.well Content -->
+						</div>						
+					</div>
+					<!-- /.Category well -->
+				</div>
+				<!-- /.Content Category -->
+			</div>
+		</div>
+		<!-- /. Course List -->
+	</div>
+	<!-- /.Content -->
+</div>
+<!-- /.Main Container -->

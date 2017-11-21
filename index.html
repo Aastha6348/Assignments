@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!-- Angular app Definition -->
+<html ng-app="App">
+
+  <head>
+
+    <!--Meta Data about HTML Page: Character Encoding- way to represent Unicode text in web pages -->
+    <meta charset="utf-8">
+    
+    <!--Meta Data about HTML Page: Viewport- User visible area of web page -->
+    <!--Meta Data about HTML PAge: content- describes the value to name attribute i.e. viewport. describes the width of device. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Learning Made Easy</title>
+
+    <!-- Compiled and minified Bootstrap CSS CDN Path-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Font Awesome CDN Path-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Angular CDN Path -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+
+    <!-- Angular Route CDN Path -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+
+    <!-- Compiled and minified Bootstrap JavaScript CDN Path -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom Javascript -->
+    <script type="text/javascript" src="app.js"></script>
+    
+    <!-- Custom stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+  </head>
+
+<!-- angular controller definition-->
+  <body ng-controller="mainController">
+
+     <!-- Navbar -->
+    <nav class="navbar navbar-default">
+
+      <!-- Navbar data -->
+      <div class="container">
+
+         <!-- Navbar Header -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/" style="color:white">Course Search</a>
+        </div>
+
+         <!-- Navbar Links -->
+        <ul class="nav navbar-nav navbar-right" >
+
+          <!--Navbar Link-Home -->
+          <li><a href="#" style="color:white"><i class="fa fa-home"></i> Home</a></li>
+          <!--/.Navbar Link-Login -->
+
+          <!--Navbar Link-Courses -->
+          <li><a href="#Courses" style="color:white"><i class="fa fa-search"></i> Courses</a></li>
+          <!--/.Navbar Link-Login -->
+        </ul>
+        <!-- /.Navbar Links -->
+      </div>
+      <!-- /.Navbar Data-->
+    </nav>
+    <!--/. Navbar -->
+
+    <!-- Custom Code -->
+    <div ng-view>
+    </div>
+    <!-- /.Custom Code -->
+  </body>
+</html>
